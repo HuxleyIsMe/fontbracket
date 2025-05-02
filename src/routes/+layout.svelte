@@ -1,0 +1,13 @@
+<script lang="ts">
+	import '../app.css';
+
+	let { children } = $props();
+</script>
+
+<div class="grid h-screen grid-rows-[auto_1fr_auto]">
+	<header class="bg-surface-950/80 sticky top-0 z-10 p-4 backdrop-blur-sm">(header)</header>
+	<main class="bg-surface-950 space-y-4 p-4">
+		{@render children()}
+	</main>
+	<footer class="bg-surface-950 p-4">(footer)</footer>
+</div>
