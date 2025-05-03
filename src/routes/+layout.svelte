@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { setBracket } from '$lib/bracket/bracket';
+	import RcScout from '$lib/components/RCScout.svelte';
 	import '../app.css';
 
 	const fonts = ['Iosevka', 'Fira Code Variable', 'Roboto Mono Variable', 'IBM Plex Mono'];
@@ -16,5 +17,5 @@
 	<main class="bg-surface-950 space-y-4 p-4">
 		{@render children()}
 	</main>
-	<footer class="bg-surface-950 p-4">(footer)</footer>
+	<footer class="bg-surface-950 p-4"><RcScout /></footer>
 </div>
