@@ -1,5 +1,10 @@
 <script lang="ts">
+	import { setBracket } from '$lib/bracket/bracket';
 	import '../app.css';
+
+	const fonts = ['Iosevka', 'Fira Code Variable', 'Roboto Mono Variable', 'IBM Plex Mono'];
+
+	setBracket(fonts);
 
 	let { children } = $props();
 </script>

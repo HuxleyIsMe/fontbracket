@@ -3,15 +3,22 @@
 	import type { CodeBlockProps } from '$lib/components/CodeBlock/types';
 
 	interface Props {
+		font: string;
 		code: string;
 		lang: CodeBlockProps['lang'];
-		color: 'primary' | 'secondary';
+		side: 'left' | 'right';
+		onclick: () => void;
 	}
 
-	const { code, lang, color }: Props = $props();
+	const { code, lang, side, font, onclick }: Props = $props();
 </script>
 
 <article class="grid h-[512px] grid-rows-[1fr_auto] p-4 md:h-full">
-	<CodeBlock {code} {lang} />
-	<button class="btn preset-outlined-{color}-500 place-self-center">Choose</button>
+	<CodeBlock {code} {lang} --contestant-font={font} />
+	<button
+		{onclick}
+		class="btn {side === 'left'
+			? 'preset-outlined-primary-500'
+			: 'preset-outlined-secondary-500'} place-self-center">Choose</button
+	>
 </article>
