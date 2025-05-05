@@ -6,10 +6,6 @@ class Bracket {
 	rounds: Round[] = [];
 
 	constructor(fonts: string[]) {
-		// if (!isPowerOf2(this.fonts.length)) {
-		// 	// TEMPORARY
-		// 	throw new Error('fonts length must be power of 2 for now');
-		// }
 		this.fonts = shuffle(fonts);
 	}
 
@@ -35,10 +31,6 @@ const shuffle = (fonts: string[]) => {
 		[fonts[i], fonts[j]] = [fonts[j], fonts[i]];
 	}
 	return fonts;
-};
-
-const isPowerOf2 = (v: number) => {
-	return v && !(v & (v - 1));
 };
 
 const DEFAULT_KEY = 'BRACKET';
