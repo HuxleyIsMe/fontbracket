@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AnimatedLink from '$lib/components/AnimatedLink.svelte';
 </script>
 
-<a class="anchor" href="/bracket">bracket</a>
+<AnimatedLink href="/bracket">bracket</AnimatedLink>

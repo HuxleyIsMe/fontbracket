@@ -1,10 +1,11 @@
 <script>
+	import AnimatedLink from './AnimatedLink.svelte';
 </script>
 
-<p class="text-surface-500 text-center">
+<p class="text-center">
 	<i class="rc-scout__logo"></i> Want to become a better programmer?
-	<a class="anchor" href="https://www.recurse.com/scout/click?t=cc51f62d4fba4eaa31f5db7120fb45a7"
-		>Join the Recurse Center!</a
+	<AnimatedLink href="https://www.recurse.com/scout/click?t=cc51f62d4fba4eaa31f5db7120fb45a7"
+		>Join the Recurse Center!</AnimatedLink
 	>
 </p>
 
