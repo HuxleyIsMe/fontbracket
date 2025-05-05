@@ -2,10 +2,9 @@
 	import { MediaQuery } from 'svelte/reactivity';
 	import Contestant from './Contestant.svelte';
 	import { getBracket } from '$lib/bracket/bracket';
+	import { examples } from '$lib/examples';
 
 	const atLeastMedium = new MediaQuery('width >= 48rem', true);
-
-	const exampleJavascript = 'const foo = 0 >= 2 ? : "IMPOSSIBLE" : { key: ["testing"] }';
 
 	const bracket = getBracket();
 	const pairsIterator = bracket.pairs();
@@ -21,7 +20,7 @@
 </script>
 
 {#snippet contestant(font: string, side: 'left' | 'right')}
-	<Contestant code={exampleJavascript} lang="js" {side} {font} onclick={() => choose(font)} />
+	<Contestant code={examples.js} lang="js" {side} {font} onclick={() => choose(font)} />
 {/snippet}
 
 {#if winner}

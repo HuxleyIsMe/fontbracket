@@ -5,9 +5,9 @@ export const shiki = createHighlighterCore({
 	engine: createJavaScriptRegexEngine(),
 	themes: [import('shiki/themes/dark-plus.mjs')],
 	langs: [
-		import('shiki/langs/console.mjs'),
-		import('shiki/langs/html.mjs'),
-		import('shiki/langs/css.mjs'),
-		import('shiki/langs/javascript.mjs')
+		import('shiki/langs/javascript.mjs'),
+		import('shiki/langs/go.mjs'),
+		import('shiki/langs/python.mjs'),
+		import('shiki/langs/rust.mjs')
 	]
 });

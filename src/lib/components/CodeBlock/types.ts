@@ -1,6 +1,8 @@
+import type { Language } from '$lib/examples';
+
 export interface CodeBlockProps {
-	code?: string;
-	lang?: 'console' | 'html' | 'css' | 'js';
+	code: string;
+	lang: Language;
 	theme?: 'dark-plus';
 	// Base style props
 	base?: string;
