@@ -6,8 +6,8 @@
 	import type { CodeBlockProps } from './types';
 
 	let {
-		code,
-		lang,
+		code = '',
+		lang = 'console',
 		theme = 'dark-plus',
 		// Base style props
 		base = 'overflow-auto',

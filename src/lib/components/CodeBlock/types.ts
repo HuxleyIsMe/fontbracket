@@ -1,8 +1,8 @@
-import type { Language } from '$lib/examples';
+import type { LanguageValue } from '$lib/examples/languages.svelte';
 
 export interface CodeBlockProps {
-	code: string;
-	lang: Language;
+	code?: string;
+	lang?: LanguageValue;
 	theme?: 'dark-plus';
 	// Base style props
 	base?: string;
