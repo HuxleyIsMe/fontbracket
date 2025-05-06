@@ -1,20 +1,30 @@
 <script lang="ts">
-	// Adapted from https://svelte.dev/playground/4941cafa6eee409d947716816190222f?version=5.28.2
-	import { getBracket } from '$lib/bracket/bracket';
+	import type { BracketStore } from '$lib/bracket/bracket';
 
-	const bracket = getBracket();
+	// Adapted from https://svelte.dev/playground/4941cafa6eee409d947716816190222f?version=5.28.2
+	interface Props {
+		bracket: BracketStore;
+	}
+
+	let { bracket }: Props = $props();
 </script>
 
 {#each bracket.rounds as round, index (index)}
 	<ul>
 		{#each round.contests as contest, index (index)}
-			<li style:font-family={contest.fonts[0]}>{contest.fonts[0]}</li>
-			<li style:font-family={contest.fonts[1]}>{contest.fonts[1]}</li>
+			{#each contest.fonts as font, index (index)}
+				<li
+					style:font-family={font}
+					class={font === contest.winner ? 'text-success-500' : 'text-error-500'}
+				>
+					{font}
+				</li>
+			{/each}
 		{/each}
 	</ul>
 	{@const winner = round.winners.length === 1 && round.winners[0]}
 	{#if winner}
-		<h2 style:font-family={winner}>{winner}</h2>
+		<h2 style:font-family={winner} class="text-success-500">{winner}</h2>
 	{/if}
 {/each}
 
@@ -54,7 +64,7 @@
 		content: '';
 		top: 50%;
 		left: 100%;
-		background: currentColor;
+		background: var(--color-tertiary-500);
 	}
 	ul li:before {
 		width: 1rem;
@@ -72,7 +82,6 @@
 		transform: translate(0%, -100%);
 	}
 	h2 {
-		text-transform: uppercase;
 		font-size: 1.25rem;
 	}
 </style>

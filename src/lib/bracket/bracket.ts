@@ -1,11 +1,12 @@
-import { getContext, setContext } from 'svelte';
 import { Round } from './round';
 
-class Bracket {
+const defaultFonts = ['Iosevka', 'Fira Code Variable', 'Roboto Mono Variable', 'IBM Plex Mono'];
+
+export class BracketStore {
 	fonts: string[] = [];
 	rounds: Round[] = [];
 
-	constructor(fonts: string[]) {
+	constructor(fonts = defaultFonts) {
 		this.fonts = shuffle(fonts);
 	}
 
@@ -21,8 +22,6 @@ class Bracket {
 			round = result;
 		}
 	}
-
-	winner() {}
 }
 
 const shuffle = (fonts: string[]) => {
@@ -31,15 +30,4 @@ const shuffle = (fonts: string[]) => {
 		[fonts[i], fonts[j]] = [fonts[j], fonts[i]];
 	}
 	return fonts;
-};
-
-const DEFAULT_KEY = 'BRACKET';
-
-export const setBracket = (fonts: string[], key = DEFAULT_KEY) => {
-	const bracket = new Bracket(fonts);
-	setContext(key, bracket);
-};
-
-export const getBracket = (key = DEFAULT_KEY) => {
-	return getContext<Bracket>(key);
 };

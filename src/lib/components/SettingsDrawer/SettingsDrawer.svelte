@@ -8,7 +8,6 @@
 	import LightSwitch from './LightSwitch.svelte';
 
 	let open = $state(false);
-	$inspect(colorSchemeStore.selected);
 </script>
 
 <Modal

@@ -1,14 +1,9 @@
 <script lang="ts">
 	import { AppBar } from '@skeletonlabs/skeleton-svelte';
-	import { setBracket } from '$lib/bracket/bracket';
 	import AnimatedLink from '$lib/components/AnimatedLink.svelte';
 	import RcScout from '$lib/components/RCScout.svelte';
 	import SettingsDrawer from '$lib/components/SettingsDrawer/SettingsDrawer.svelte';
 	import '../app.css';
-
-	const fonts = ['Iosevka', 'Fira Code Variable', 'Roboto Mono Variable', 'IBM Plex Mono'];
-
-	setBracket(fonts);
 
 	let { children } = $props();
 </script>
