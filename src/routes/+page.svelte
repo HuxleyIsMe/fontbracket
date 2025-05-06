@@ -2,6 +2,7 @@
 	import { MediaQuery } from 'svelte/reactivity';
 	import Contestant from '$lib/components/Contestant.svelte';
 	import { getBracket } from '$lib/bracket/bracket';
+	import Bracket from '$lib/components/Bracket.svelte';
 
 	const atLeastMedium = new MediaQuery('width >= 48rem', true);
 
@@ -23,7 +24,9 @@
 {/snippet}
 
 {#if winner}
-	<p>You chose {winner}.</p>
+	<div class="flex w-full">
+		<Bracket />
+	</div>
 {:else if pair}
 	<div class="grid h-full grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]">
 		{@render contestant(pair.fonts[0], 'left')}
