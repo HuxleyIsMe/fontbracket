@@ -4,6 +4,7 @@
 	import X from '@lucide/svelte/icons/x';
 	import { languageStore } from '$lib/examples/languages.svelte';
 	import { colorSchemeStore } from '$lib/examples/colorscheme.svelte';
+	import { themeStore } from '$lib/theme.svelte';
 
 	let open = $state(false);
 </script>
@@ -43,6 +44,14 @@
 				<select class="select" bind:value={colorSchemeStore.selected}>
 					{#each colorSchemeStore.options as colorscheme (colorscheme)}
 						<option value={colorscheme}>{colorscheme.label}</option>
+					{/each}
+				</select>
+			</label>
+			<label class="label">
+				<span class="label-text">Site Color Scheme</span>
+				<select class="select" bind:value={themeStore.selected}>
+					{#each themeStore.options as theme (theme)}
+						<option value={theme}>{theme.label}</option>
 					{/each}
 				</select>
 			</label>
