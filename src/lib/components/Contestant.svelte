@@ -14,12 +14,13 @@
 	const theme = $derived(colorSchemeStore.selected);
 </script>
 
-<article class="grid h-[512px] grid-rows-[1fr_auto] p-4 md:h-[768px]">
+<article class="grid h-[512px] grid-rows-[1fr_auto] gap-4 md:h-[768px]">
 	<CodeBlock code={lang?.code} lang={lang?.value} theme={theme?.value} --contestant-font={font} />
 	<button
 		{onclick}
 		class="btn {side === 'left'
-			? 'preset-outlined-primary-500'
-			: 'preset-outlined-secondary-500'} place-self-center">Choose</button
+			? 'preset-outlined-primary-500 hover:preset-tonal-primary'
+			: 'preset-outlined-secondary-500 hover:preset-tonal-secondary'} place-self-center"
+		>Choose</button
 	>
 </article>

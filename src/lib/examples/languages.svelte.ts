@@ -1,3 +1,4 @@
+import { browser } from '$app/environment';
 import { go, js, python, rust } from './fizzbuzz';
 
 export type LanguageValue = 'go' | 'js' | 'python' | 'rust' | 'console';
@@ -34,7 +35,11 @@ class LanguageStore {
 	]);
 
 	constructor() {
-		this.#selected = this.#options[0];
+		if (browser && localStorage.getItem('lang')) {
+			this.#selected = this.#options.find((lang) => lang.value === localStorage.getItem('lang'));
+		} else {
+			this.#selected = this.#options[0];
+		}
 	}
 
 	public get selected(): Language | undefined {
@@ -42,6 +47,9 @@ class LanguageStore {
 	}
 
 	public set selected(v: Language) {
+		if (browser) {
+			localStorage.setItem('lang', v.value);
+		}
 		this.#selected = v;
 	}
 

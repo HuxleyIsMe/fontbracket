@@ -5,8 +5,10 @@
 	import { languageStore } from '$lib/examples/languages.svelte';
 	import { colorSchemeStore } from '$lib/examples/colorscheme.svelte';
 	import { themeStore } from '$lib/theme.svelte';
+	import LightSwitch from './LightSwitch.svelte';
 
 	let open = $state(false);
+	$inspect(colorSchemeStore.selected);
 </script>
 
 <Modal
@@ -31,6 +33,10 @@
 			>
 		</header>
 		<form class="mx-auto w-full max-w-md space-y-4">
+			<label class="label">
+				<span class="label-text">Dark Mode</span>
+				<LightSwitch />
+			</label>
 			<label class="label">
 				<span class="label-text">Language</span>
 				<select class="select" bind:value={languageStore.selected}>

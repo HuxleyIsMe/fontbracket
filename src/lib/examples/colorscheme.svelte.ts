@@ -1,3 +1,5 @@
+import { browser } from '$app/environment';
+
 const colorSchemes = [
 	{ label: 'Andromeeda', value: 'andromeeda' },
 	{ label: 'Aurora X', value: 'aurora-x' },
@@ -69,7 +71,13 @@ class ColorSchemeStore {
 	#options = colorSchemes;
 
 	constructor() {
-		this.#selected = this.#options[7]; // dark-plus
+		if (browser && localStorage.getItem('colorscheme')) {
+			this.#selected = this.#options.find(
+				(colorscheme) => colorscheme.value === localStorage.getItem('colorscheme')
+			);
+		} else {
+			this.#selected = this.#options[7]; // dark-plus
+		}
 	}
 
 	public get selected(): ColorScheme | undefined {
@@ -77,6 +85,9 @@ class ColorSchemeStore {
 	}
 
 	public set selected(v: ColorScheme) {
+		if (browser) {
+			localStorage.setItem('colorscheme', v.value);
+		}
 		this.#selected = v;
 	}
 

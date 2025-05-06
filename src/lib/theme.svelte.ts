@@ -1,3 +1,5 @@
+import { browser } from '$app/environment';
+
 const themes = [
 	{
 		label: 'Catppuccin',
@@ -97,7 +99,11 @@ class ThemeStore {
 	#options = themes;
 
 	constructor() {
-		this.#selected = this.#options[0];
+		if (browser && localStorage.getItem('theme')) {
+			this.#selected = this.#options.find((theme) => theme.value === localStorage.getItem('theme'));
+		} else {
+			this.#selected = this.#options[0];
+		}
 	}
 
 	public get selected(): Theme | undefined {
@@ -105,8 +111,11 @@ class ThemeStore {
 	}
 
 	public set selected(v: Theme) {
+		if (browser) {
+			localStorage.setItem('theme', v.value);
+			document.documentElement.setAttribute('data-theme', v.value);
+		}
 		this.#selected = v;
-		document.documentElement.setAttribute('data-theme', v.value);
 	}
 
 	public get options(): typeof themes {
