@@ -1,9 +1,10 @@
+import type { ColorSchemeValue } from '$lib/examples/colorscheme.svelte';
 import type { LanguageValue } from '$lib/examples/languages.svelte';
 
 export interface CodeBlockProps {
 	code?: string;
 	lang?: LanguageValue;
-	theme?: 'dark-plus';
+	theme?: ColorSchemeValue;
 	// Base style props
 	base?: string;
 	rounded?: string;

@@ -3,6 +3,7 @@
 	import Menu from '@lucide/svelte/icons/menu';
 	import X from '@lucide/svelte/icons/x';
 	import { languageStore } from '$lib/examples/languages.svelte';
+	import { colorSchemeStore } from '$lib/examples/colorscheme.svelte';
 
 	let open = $state(false);
 </script>
@@ -31,9 +32,17 @@
 		<form class="mx-auto w-full max-w-md space-y-4">
 			<label class="label">
 				<span class="label-text">Language</span>
-				<select class="select" id="lang" bind:value={languageStore.selected}>
+				<select class="select" bind:value={languageStore.selected}>
 					{#each languageStore.options as language (language)}
 						<option value={language}>{language.label}</option>
+					{/each}
+				</select>
+			</label>
+			<label class="label">
+				<span class="label-text">Code Color Scheme</span>
+				<select class="select" bind:value={colorSchemeStore.selected}>
+					{#each colorSchemeStore.options as colorscheme (colorscheme)}
+						<option value={colorscheme}>{colorscheme.label}</option>
 					{/each}
 				</select>
 			</label>

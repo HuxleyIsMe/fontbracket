@@ -1,13 +1,12 @@
-import { createHighlighterCore } from 'shiki/core';
+import { colorSchemeStore } from '$lib/examples/colorscheme.svelte';
+import { languageStore } from '$lib/examples/languages.svelte';
+import { createHighlighter } from 'shiki';
 import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
 
-export const shiki = createHighlighterCore({
+const shiki = createHighlighter({
 	engine: createJavaScriptRegexEngine(),
-	themes: [import('shiki/themes/dark-plus.mjs')],
-	langs: [
-		import('shiki/langs/javascript.mjs'),
-		import('shiki/langs/go.mjs'),
-		import('shiki/langs/python.mjs'),
-		import('shiki/langs/rust.mjs')
-	]
+	themes: colorSchemeStore.options.map((colorscheme) => colorscheme.value),
+	langs: languageStore.options.map((lang) => lang.value)
 });
+
+export { shiki };
