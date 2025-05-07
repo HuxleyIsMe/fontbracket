@@ -8,16 +8,166 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/azeret-mono':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource-variable/chivo-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource-variable/fira-code':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource-variable/geist-mono':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/inconsolata':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/kode-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/m-plus-1-code':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/martian-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/overpass-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/red-hat-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/reddit-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource-variable/roboto-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/sometype-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/source-code-pro':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/spline-sans-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/ubuntu-sans-mono':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource-variable/victor-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/anonymous-pro':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/b612-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/comic-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/commit-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/courier-prime':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/cousine':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/cutive-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/dm-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/fira-mono':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource/fragment-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/ia-writer-duo':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/ia-writer-mono':
         specifier: ^5.2.5
         version: 5.2.5
       '@fontsource/ibm-plex-mono':
         specifier: ^5.2.5
         version: 5.2.5
       '@fontsource/iosevka':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/iosevka-aile':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/iosevka-curly':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/iosevka-curly-slab':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/iosevka-etoile':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/league-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/lxgw-wenkai-mono-tc':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/maple-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/monaspace-argon':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/monaspace-krypton':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/monaspace-neon':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/mononoki':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/noto-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/nova-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/oxygen-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/pitagon-sans-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/pt-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/space-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/syne-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/ubuntu-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/unifontex':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/vt323':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/xanh-mono':
         specifier: ^5.2.5
         version: 5.2.5
       '@lucide/svelte':
@@ -364,17 +514,167 @@ packages:
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
 
+  '@fontsource-variable/azeret-mono@5.2.7':
+    resolution: {integrity: sha512-jMeZUZ6QD8UR4bfQ9PvKmLCbIdBJUcsa4euzNZSRY2cum5VB3gHltHUWTC0AcvAMRhV9lcoDehWykOtPdWZTGw==}
+
+  '@fontsource-variable/chivo-mono@5.2.5':
+    resolution: {integrity: sha512-F3TcyZvMonfjjEdDbXiu26sBd0tcltqRZreZhj+R4nyhLffASMttRbdVuFGKQn8SVwv/RQ15j0NkxnNsWSSEaA==}
+
   '@fontsource-variable/fira-code@5.2.5':
     resolution: {integrity: sha512-rw0z/D9Tsp7asvwK/XFHz+xMkgR7MPRCa6U9e77alsmJQFqniEWt/c+1xKCZR2omEw1hVP7ej48Z1O8c/YiSVg==}
+
+  '@fontsource-variable/geist-mono@5.2.6':
+    resolution: {integrity: sha512-vw6T9JGTrYJ980bn7W8iTPhe2jVK5ifunVs7xh9dfTVArjDSkJs03JjeZrH5LKEpGABLXSlSlNU57HRm4tmFMg==}
+
+  '@fontsource-variable/inconsolata@5.2.5':
+    resolution: {integrity: sha512-CqYyjFNuArFv+cLRQodR+A9jJm2UMnBoP29yjYqjkd7Cgwz3pnMs3p68kmUb6VD/UqpDQR3deYTwa7RWFPOFew==}
+
+  '@fontsource-variable/jetbrains-mono@5.2.5':
+    resolution: {integrity: sha512-G3sN1xq1moZd0JL+hFaA4MEdsiQS+JXC/z7m+EqA5/Fzn5CQlXGUaaNKFGQdDsFuLTnCfW0KOOSWHjygNfjEPw==}
+
+  '@fontsource-variable/kode-mono@5.2.5':
+    resolution: {integrity: sha512-gO4hWWwU/xkjyFqAmfmyJwjkOclsMRz4JWBIbcRaL5/qx6NDluzR7bx7RI5WZSlkBNt5J7CXI5gUcyfqapXCUg==}
+
+  '@fontsource-variable/m-plus-1-code@5.2.5':
+    resolution: {integrity: sha512-HCOnuJncJRayGmE4SjYQQQEzWULd1MbxUSL6RGOh8+/ofZsDazwziFOEVsNZSQebqneeWCEGhq4zRbXCGIJRRw==}
+
+  '@fontsource-variable/martian-mono@5.2.5':
+    resolution: {integrity: sha512-3Egtgl7njRGZnUFKNyi9gQGBBNPzJdxOVrqbp9NF0cK7SLtzlAu9J18C4lt1OAigfcxvOA1D8SI8QCimpSJTCw==}
+
+  '@fontsource-variable/overpass-mono@5.2.5':
+    resolution: {integrity: sha512-9/2588bHxpykwL5APFePPOufN1p99Da+XjYYDIgQcruCC5qTxqtBCLk21t4mSNXd3JILHce4fTaRAPtBR4v6kA==}
+
+  '@fontsource-variable/red-hat-mono@5.2.5':
+    resolution: {integrity: sha512-BP2zCfaBvjvx/+ijLYH6joqQ7aZyM5XecNuXSPUQ3G05fjU3q2MfEPT8CjIQ6LgsSpCxWOmrdlxOofDb/8pp2g==}
+
+  '@fontsource-variable/reddit-mono@5.2.5':
+    resolution: {integrity: sha512-F0eqJugZtuWTguQKH7I7PVZRnPYM/Z79StSCNiyx5L5fFCCuD+LMllcXHYQLtHPmRiJgtN6PDcrt8agiuqW89g==}
 
   '@fontsource-variable/roboto-mono@5.2.5':
     resolution: {integrity: sha512-JsvF7AvjgqGBKCtVuBE5rdYrTdx8yY61Ralo0n6wnlWLCtYAHnj7NjHmpWWvSq9ROKByRfropM7VyeO0a66M3Q==}
 
+  '@fontsource-variable/sometype-mono@5.2.5':
+    resolution: {integrity: sha512-xMXu8G4Dxc22P74QgoMNqzL+3SKgyG5C/g1KtUhdR12srnOix2QC90sx8cpFYdPh2dHssXNmaZwOzcAxRNy1Tw==}
+
+  '@fontsource-variable/source-code-pro@5.2.5':
+    resolution: {integrity: sha512-Mi0+uddn7+wE2hytXVG4RN7TJ8aLU6SU/4GVxBRgkaGsI/WQ3ir3uSzbUGBmG7EnEGQkenr21eVmDHdba2RBKA==}
+
+  '@fontsource-variable/spline-sans-mono@5.2.5':
+    resolution: {integrity: sha512-/ka2yZJDW5LPMtnTq6b7FbNAm4RznIrkD7IPgmV7azPLkQKvcOCatnau7F8eVmhWk6eYiODB3kZTKW6RKao6tA==}
+
+  '@fontsource-variable/ubuntu-sans-mono@5.2.7':
+    resolution: {integrity: sha512-kaCmpg92tSxgcXfbNnot7Bu3GAYKGPJGPjjf98ilCyNk4gTpG4vPLJtrWvCbBF8ImJLKGV8Uxx5zfTmkVe156w==}
+
+  '@fontsource-variable/victor-mono@5.2.5':
+    resolution: {integrity: sha512-o8PBOBGGtPDNRheUXEDuGpblkTHUefKda45k+5rH3HOaUhDVrorXQhnEfKsCeVN9g338HXAU3T5dpw2zR0h+nw==}
+
+  '@fontsource/anonymous-pro@5.2.5':
+    resolution: {integrity: sha512-2SDzsdM066SXP/eY1fqvfWI2b1nI3461/d+o5DXrC7v+WchGrOGqoQCmsBLuPotGHGMtpftP0RbRJY7+Yxc3MQ==}
+
+  '@fontsource/b612-mono@5.2.5':
+    resolution: {integrity: sha512-mCMgTMhPjfwK/1O/VKdTPKcxAP3ZsnOhs3yOs38TkNGv2SooA8+2Tse1tDtjOHbsolf7KnKFDNN9skCYgHOFUA==}
+
+  '@fontsource/comic-mono@5.2.5':
+    resolution: {integrity: sha512-LkTanqEt2YSFors2j+VSnvJlVO5n8zDyjlQU+hz9yl30MHyRsyJfgWyrVHKfE0NjbMVlVScZ4xT5Q72oR0MyXA==}
+
+  '@fontsource/commit-mono@5.2.5':
+    resolution: {integrity: sha512-htX8yQWtiPt5L1Hzh4sirvfUJT2+KYiquDB/Q2sY2tWQYplpBUOD5zHnIM3k36Hnm4V+JIIqA/wmwupSQ68WjA==}
+
+  '@fontsource/courier-prime@5.2.5':
+    resolution: {integrity: sha512-je73pcLzFavKXNPBZP07paiTqK3DS5wUl3JDpcsxrBbVGtznK975WwEIZ+Bd8zC2eCebPJVkddJAY8qQMv2TBQ==}
+
+  '@fontsource/cousine@5.2.5':
+    resolution: {integrity: sha512-qqY+40mfk1jDZkjVFIpiTdY0tJbrDGw/tMpnstRARmKtRbJHwZ6ckH1c3GdJsNn6kDGqtNVdj4322xRcFU3tDg==}
+
+  '@fontsource/cutive-mono@5.2.5':
+    resolution: {integrity: sha512-Xpsl9JPEpIbExaEHpeUnx72tBhskjVCBm49ngaoMra75rVuX4/T2LyKXDJXhoDqs90aRed+B8qsRyzZpaqsZiw==}
+
+  '@fontsource/dm-mono@5.2.5':
+    resolution: {integrity: sha512-+dTNMXWxmvNtEWE/45MxFO7s60sy9famJhbtNghcvuEleMFcf32anQe3y4FqoCEL/rdQFvRiCoMCDguHw9krog==}
+
+  '@fontsource/fira-mono@5.2.6':
+    resolution: {integrity: sha512-6pyiGeFH+5DP5sICSwx5wu+9BlTEMTKki7bTppsEqXJysi1MiK82n6oSUaYkQWRLH51+DK7zv2JJsi82cOIS3g==}
+
+  '@fontsource/fragment-mono@5.2.5':
+    resolution: {integrity: sha512-RPd1IIF8vUPhI0G+FK86ANjfxg8WEZ2S6yYavhOkPYZVFroCBZoTz9DM1ZBnNBC6rQndAzrwTltINZoNzul2zw==}
+
+  '@fontsource/ia-writer-duo@5.2.5':
+    resolution: {integrity: sha512-whu1WS/hYAwSCvEuSSa5tCi/dIsrxXPUaSbsIdkPYEswRA7ooptIIYEXXhFWUtn8xjPV10PvLuWy7j0RXYDfOw==}
+
+  '@fontsource/ia-writer-mono@5.2.5':
+    resolution: {integrity: sha512-sPUynEKIYKuhJm0ntXEkxtA0lsc2Udme1G23wve5JnToZnab6VMVabS3JA+lx1dmY96SxCq/TB/WLEG/Mk+m9g==}
+
   '@fontsource/ibm-plex-mono@5.2.5':
     resolution: {integrity: sha512-G09N3GfuT9qj3Ax2FDZvKqZttzM3v+cco2l8uXamhKyXLdmlaUDH5o88/C3vtTHj2oT7yRKsvxz9F+BXbWKMYA==}
 
+  '@fontsource/iosevka-aile@5.2.5':
+    resolution: {integrity: sha512-K9EwsSxfWPWjvrYM+NkgHaImpHgaVgC67l6uWf6W+4taeca6LKMJn/U11mQiRwLlecoI0PP2Q9o/8iIPaLOSgg==}
+
+  '@fontsource/iosevka-curly-slab@5.2.5':
+    resolution: {integrity: sha512-hB+WAmeNAc0rFay9Whzq5ZRh7ea06LyhAZbs83kYaZMtNjPjpr/WojKqOC6wh4a51V/E4Cyvtq/W0gjA8Qg9jA==}
+
+  '@fontsource/iosevka-curly@5.2.5':
+    resolution: {integrity: sha512-IwcvgwOpytFc59R3eeQrCGi4jYZrm07KvDM9DX2lvoSTr0rbw5hMvZf/y0PkPE6tmAG4ZEX1cPJ5sHXYizBufw==}
+
+  '@fontsource/iosevka-etoile@5.2.5':
+    resolution: {integrity: sha512-DaqaNB1G6qhGh+D+WxZUrln0UJmrM7qXgJgdeXm3U1ekcIph2aWPAcmI1edDj9FLkuGl2ZU9TYywIvzVF6lz0Q==}
+
   '@fontsource/iosevka@5.2.5':
     resolution: {integrity: sha512-Zv/UHJodDug1LcnWv2u2+GPp3oWP3U6Xp16cJOsqqZQNsCu8sA/ttT331N0NypxBZ+7c8szlSRlYDcy9liZ8pw==}
+
+  '@fontsource/league-mono@5.2.5':
+    resolution: {integrity: sha512-2ILGfCD3rxylwsqg5k5IgifgnG+BPT3XYI15cjplHGLANAKWPginGQs3/wnGbPyEvn1y5/mreYabgYXRBnQeSw==}
+
+  '@fontsource/lxgw-wenkai-mono-tc@5.2.5':
+    resolution: {integrity: sha512-LIbAY1GZ8yNdHn6GZNleDBv4hnxbaXLVU3ShTGrnYlwfZ1jg4asgXEPky6zocqdkM723rdEUQliTNRSAWs8pTQ==}
+
+  '@fontsource/maple-mono@5.2.5':
+    resolution: {integrity: sha512-iJR/yQj+7DatkzxJNMu3+1gvq1YOHhCjlS6MBOys/Fw/BEDnhC65mp3RZoBXDbk+00flvRO9b9G/IvxBk82Ekw==}
+
+  '@fontsource/monaspace-argon@5.2.5':
+    resolution: {integrity: sha512-EJ+jq1Smm3BB+8RK/gwB1uzjrSKdycZkKm8OZGCYvqJiTChKcGe7b2lmj0PmQbb/+lAEdCBIAcFLlPaWhtRANA==}
+
+  '@fontsource/monaspace-krypton@5.2.5':
+    resolution: {integrity: sha512-dOWSb0DtSMfjbptckxTme2FKNfRkFtmTuNRQ86sBki/CanR4ajSrE+GuJoCm9Kl3352CvafoRt2fDo8FU+Gz4A==}
+
+  '@fontsource/monaspace-neon@5.2.5':
+    resolution: {integrity: sha512-TjSSuHC37DroyhP5YCKRCAxdUb3In/uqHzqqW/8Ul+JWilz37d8lr8jFeapnbD3QdYXgiQoU2Rf/CmTdyl06DA==}
+
+  '@fontsource/mononoki@5.2.5':
+    resolution: {integrity: sha512-sTHgfpalruDdThonH0GSIBzFqXm2/T0iCuegLrL15ql9XtpGk+aBsmvcnfwnffHQoGaP1QHQMb3Dt9daZ2Nncg==}
+
+  '@fontsource/noto-mono@5.2.5':
+    resolution: {integrity: sha512-mWcCCJtB7CneVkqDz8WzzXXnAgFldJmkVL3AX815RjKaEP+dEGzxjVX89080wmXQ322Z6vcb+PI9qP9RbafKcg==}
+
+  '@fontsource/nova-mono@5.2.5':
+    resolution: {integrity: sha512-j9RO8N8aFknAe20QApzzm0y3exDRCTSXh1fVKwsW0bqaLKNaHttqH4ebx6nezd7SfhBZMGHkveYRV5s7rLQS6Q==}
+
+  '@fontsource/oxygen-mono@5.2.5':
+    resolution: {integrity: sha512-wq75nghThSwMsefL/SqDJTm2sSMVZiM8BKSsXhJQTEAXCXWSUcV27C9v4ciNwhS8l68MZnD6sJjaQtU5Y4iKEQ==}
+
+  '@fontsource/pitagon-sans-mono@5.2.5':
+    resolution: {integrity: sha512-jNyWobiLcENpIxsczKFfLvqyQQOBjL3a408G/ky/CFAzii8USg+8SujKhz8T4qzZtCh8UDo9dQrG6Y5OTKs1cw==}
+
+  '@fontsource/pt-mono@5.2.5':
+    resolution: {integrity: sha512-FM/vqh/W0I3v2WygNm5pZeS+5bbgUcnbjmwOwem7sBsEpJ/BkYiB/VFHIMD36XsTGkQ7vMApAhEXrZMID9I10A==}
+
+  '@fontsource/space-mono@5.2.5':
+    resolution: {integrity: sha512-yFU6K17ko4LEDHl5554n6mCrmDbuc2xYGCZZkCRpAvRtCaJisUjxFdDdph2d2hiIElaiMlinmkmV8IWlbQCMJA==}
+
+  '@fontsource/syne-mono@5.2.5':
+    resolution: {integrity: sha512-IYXRrbjRUpwoIqea0k29b0uyGiNezTGuwiCFW+ZG0B1iuulBDdC41fHnCy8K6Dy53gh8lKb3EeuqUEwYNfDGLw==}
+
+  '@fontsource/ubuntu-mono@5.2.5':
+    resolution: {integrity: sha512-1QWuBVS8qLs5cxJfIOcDOk9iLvRYaBS1tz6yG6Jl1AsN8uKxJbQdnO5oR5mql6lZ0v0AiYnvmZ874pFclcYu8A==}
+
+  '@fontsource/unifontex@5.2.5':
+    resolution: {integrity: sha512-hsL2My3RqF+9j969qEueTDcs+LhRCn9X4rt6tVstC84LnlytyaqzwCxKAu5zveSalz8d42KhBRASAyDcelWOAA==}
+
+  '@fontsource/vt323@5.2.5':
+    resolution: {integrity: sha512-DWGyXR/dvg8xGVmwBJVc/iEb8HKr9mW1PKHtI8z2riUwZFmfhN4EytUx+ODN+AgJPCVsuM0JWH85AkQqR0aPaA==}
+
+  '@fontsource/xanh-mono@5.2.5':
+    resolution: {integrity: sha512-fYtwgtAbxN9m1FnUAB0hnlWi4/MzbetOiv18UPxanjUbWqg6PcHUpwEHuuITtr8jN8k/x7DPep2K8obfG4uEUQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2341,13 +2641,113 @@ snapshots:
 
   '@floating-ui/utils@0.2.9': {}
 
+  '@fontsource-variable/azeret-mono@5.2.7': {}
+
+  '@fontsource-variable/chivo-mono@5.2.5': {}
+
   '@fontsource-variable/fira-code@5.2.5': {}
+
+  '@fontsource-variable/geist-mono@5.2.6': {}
+
+  '@fontsource-variable/inconsolata@5.2.5': {}
+
+  '@fontsource-variable/jetbrains-mono@5.2.5': {}
+
+  '@fontsource-variable/kode-mono@5.2.5': {}
+
+  '@fontsource-variable/m-plus-1-code@5.2.5': {}
+
+  '@fontsource-variable/martian-mono@5.2.5': {}
+
+  '@fontsource-variable/overpass-mono@5.2.5': {}
+
+  '@fontsource-variable/red-hat-mono@5.2.5': {}
+
+  '@fontsource-variable/reddit-mono@5.2.5': {}
 
   '@fontsource-variable/roboto-mono@5.2.5': {}
 
+  '@fontsource-variable/sometype-mono@5.2.5': {}
+
+  '@fontsource-variable/source-code-pro@5.2.5': {}
+
+  '@fontsource-variable/spline-sans-mono@5.2.5': {}
+
+  '@fontsource-variable/ubuntu-sans-mono@5.2.7': {}
+
+  '@fontsource-variable/victor-mono@5.2.5': {}
+
+  '@fontsource/anonymous-pro@5.2.5': {}
+
+  '@fontsource/b612-mono@5.2.5': {}
+
+  '@fontsource/comic-mono@5.2.5': {}
+
+  '@fontsource/commit-mono@5.2.5': {}
+
+  '@fontsource/courier-prime@5.2.5': {}
+
+  '@fontsource/cousine@5.2.5': {}
+
+  '@fontsource/cutive-mono@5.2.5': {}
+
+  '@fontsource/dm-mono@5.2.5': {}
+
+  '@fontsource/fira-mono@5.2.6': {}
+
+  '@fontsource/fragment-mono@5.2.5': {}
+
+  '@fontsource/ia-writer-duo@5.2.5': {}
+
+  '@fontsource/ia-writer-mono@5.2.5': {}
+
   '@fontsource/ibm-plex-mono@5.2.5': {}
 
+  '@fontsource/iosevka-aile@5.2.5': {}
+
+  '@fontsource/iosevka-curly-slab@5.2.5': {}
+
+  '@fontsource/iosevka-curly@5.2.5': {}
+
+  '@fontsource/iosevka-etoile@5.2.5': {}
+
   '@fontsource/iosevka@5.2.5': {}
+
+  '@fontsource/league-mono@5.2.5': {}
+
+  '@fontsource/lxgw-wenkai-mono-tc@5.2.5': {}
+
+  '@fontsource/maple-mono@5.2.5': {}
+
+  '@fontsource/monaspace-argon@5.2.5': {}
+
+  '@fontsource/monaspace-krypton@5.2.5': {}
+
+  '@fontsource/monaspace-neon@5.2.5': {}
+
+  '@fontsource/mononoki@5.2.5': {}
+
+  '@fontsource/noto-mono@5.2.5': {}
+
+  '@fontsource/nova-mono@5.2.5': {}
+
+  '@fontsource/oxygen-mono@5.2.5': {}
+
+  '@fontsource/pitagon-sans-mono@5.2.5': {}
+
+  '@fontsource/pt-mono@5.2.5': {}
+
+  '@fontsource/space-mono@5.2.5': {}
+
+  '@fontsource/syne-mono@5.2.5': {}
+
+  '@fontsource/ubuntu-mono@5.2.5': {}
+
+  '@fontsource/unifontex@5.2.5': {}
+
+  '@fontsource/vt323@5.2.5': {}
+
+  '@fontsource/xanh-mono@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 
