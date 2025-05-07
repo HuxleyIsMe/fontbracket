@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import Type from '@lucide/svelte/icons/type';
-	import { getFontStore, saveFontStore, type Font } from '$lib/fonts.svelte';
+	import { getFontStore, type Font } from '$lib/fonts.svelte';
 
 	let fontStore = getFontStore();
 	let fonts = $derived(
@@ -16,7 +16,6 @@
 
 	const setFont = (font: Font, checked: boolean) => {
 		fontStore.set(font, checked);
-		saveFontStore(fontStore);
 	};
 </script>
 

@@ -4,6 +4,7 @@
 	import Bracket from '$lib/components/Bracket.svelte';
 	import { BracketStore } from '$lib/bracket/bracket';
 	import { getFontStore, type Font } from '$lib/fonts.svelte';
+	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
 	const atLeastMedium = new MediaQuery('width >= 48rem', true);
 
@@ -30,10 +31,12 @@
 	const reset = () => {
 		bracket = new BracketStore(fonts);
 	};
+
+	let showFontName = $state(false);
 </script>
 
 {#snippet contestant(font: string, side: 'left' | 'right')}
-	<Contestant {side} {font} onclick={() => choose(font)} />
+	<Contestant {side} {showFontName} {font} onclick={() => choose(font)} />
 {/snippet}
 
 <div class="flex flex-col justify-center gap-4">
@@ -42,7 +45,13 @@
 			<Bracket {bracket} />
 		</div>
 	{:else if pair}
-		<p>{pair.fonts[0]} vs {pair.fonts[1]}</p>
+		<label class="label flex items-center space-x-2">
+			<Switch
+				checked={showFontName}
+				onCheckedChange={(e: { checked: boolean }) => (showFontName = e.checked)}
+			></Switch>
+			<span class="label-text">Show Font Names</span>
+		</label>
 		<div class="grid h-full grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]">
 			{@render contestant(pair.fonts[0], 'left')}
 			{#if atLeastMedium.current}
@@ -55,6 +64,7 @@
 	{:else}
 		<p>Not sure how you got here, but there's no valid fonts.</p>
 	{/if}
+
 	<button
 		type="button"
 		class="btn preset-outlined-error-500 hover:preset-tonal-error self-center"

@@ -7,14 +7,18 @@
 		font: string;
 		side: 'left' | 'right';
 		onclick: () => void;
+		showFontName: boolean;
 	}
 
-	const { side, font, onclick }: Props = $props();
+	const { side, font, onclick, showFontName }: Props = $props();
 	const lang = $derived(languageStore.selected);
 	const theme = $derived(colorSchemeStore.selected);
 </script>
 
 <article class="grid h-[512px] grid-rows-[1fr_auto] gap-4 md:h-[768px]">
+	{#if showFontName}
+		<p style:font-family={font}>{font}</p>
+	{/if}
 	<CodeBlock code={lang?.code} lang={lang?.value} theme={theme?.value} --contestant-font={font} />
 	<button
 		{onclick}

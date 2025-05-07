@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal } from '@skeletonlabs/skeleton-svelte';
+	import { Modal, Switch } from '@skeletonlabs/skeleton-svelte';
 	import Menu from '@lucide/svelte/icons/menu';
 	import X from '@lucide/svelte/icons/x';
 	import { languageStore } from '$lib/examples/languages.svelte';
@@ -8,7 +8,7 @@
 	import LightSwitch from './LightSwitch.svelte';
 	import FontAccordian from './FontAccordian.svelte';
 
-	let open = $state(true);
+	let open = $state(false);
 </script>
 
 <Modal
