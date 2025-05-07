@@ -1,4 +1,3 @@
-import { browser } from '$app/environment';
 import { getContext, setContext } from 'svelte';
 import { SvelteMap } from 'svelte/reactivity';
 
@@ -56,26 +55,18 @@ const defaultFonts = [
 	'Iosevka Curly',
 	'LXGW WenKai Mono TC',
 	'Iosevka Curly Slab',
-	'UnifontEX'
+	'UnifontEX',
+	'Cascadia Code',
+	'Cascadia Mono',
+	'Atkinson Hyperlegible Mono',
+	'Recursive'
 ] as const;
 
 export type Font = (typeof defaultFonts)[number];
 
 const DEFAULT_KEY = 'fonts';
 
-export const setFontStore = (fonts?: Font[], key = DEFAULT_KEY) => {
-	if (!fonts && browser && localStorage.getItem('fonts')) {
-		const storedFonts = Object.entries(JSON.parse(localStorage.getItem('fonts')!)) as [
-			Font,
-			boolean
-		][];
-		setContext(key, new SvelteMap(storedFonts));
-		return;
-	}
-	if (!fonts) {
-		fonts = [...defaultFonts];
-	}
-
+export const setFontStore = (fonts: Font[] = [...defaultFonts], key = DEFAULT_KEY) => {
 	setContext(key, new SvelteMap(fonts.map((font) => [font, true])));
 };
 
@@ -83,6 +74,12 @@ export const getFontStore = (key = DEFAULT_KEY) => {
 	return getContext<SvelteMap<Font, boolean>>(key);
 };
 
-export const saveFontStore = (store: SvelteMap<Font, boolean>, key = DEFAULT_KEY) => {
-	localStorage.setItem(key, JSON.stringify(Object.fromEntries(store)));
+const showFontNames = $state(false);
+
+export const getShowFontNames = () => {
+	return getContext<boolean>('showFontNames');
+};
+
+export const setShowFontNames = () => {
+	setContext('showFontNames', showFontNames);
 };

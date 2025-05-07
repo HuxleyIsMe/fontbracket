@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Recursive:wght@300..1000&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
