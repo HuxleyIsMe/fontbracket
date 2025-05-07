@@ -4,8 +4,11 @@
 	import RcScout from '$lib/components/RCScout.svelte';
 	import SettingsDrawer from '$lib/components/SettingsDrawer/SettingsDrawer.svelte';
 	import '../app.css';
+	import { setFontStore } from '$lib/fonts.svelte';
 
 	let { children } = $props();
+
+	setFontStore();
 </script>
 
 <svelte:head>

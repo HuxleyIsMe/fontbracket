@@ -1,12 +1,11 @@
+import type { Font } from '$lib/fonts.svelte';
 import { Round } from './round';
 
-const defaultFonts = ['Iosevka', 'Fira Code Variable', 'Roboto Mono Variable', 'IBM Plex Mono'];
-
 export class BracketStore {
-	fonts: string[] = [];
+	fonts: Font[] = [];
 	rounds: Round[] = [];
 
-	constructor(fonts = defaultFonts) {
+	constructor(fonts: Font[] = []) {
 		this.fonts = shuffle(fonts);
 	}
 
@@ -24,7 +23,7 @@ export class BracketStore {
 	}
 }
 
-const shuffle = (fonts: string[]) => {
+const shuffle = (fonts: Font[]) => {
 	for (let i = fonts.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
 		[fonts[i], fonts[j]] = [fonts[j], fonts[i]];

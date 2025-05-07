@@ -6,8 +6,19 @@
 	import { colorSchemeStore } from '$lib/examples/colorscheme.svelte';
 	import { themeStore } from '$lib/theme.svelte';
 	import LightSwitch from './LightSwitch.svelte';
+	import { getFontStore } from '$lib/fonts.svelte';
 
-	let open = $state(false);
+	let fontStore = getFontStore();
+	let fonts = $derived(
+		fontStore
+			.keys()
+			.map((font) => ({ value: font, checked: fontStore.get(font)! }))
+			.toArray()
+	);
+
+	$inspect(fonts);
+
+	let open = $state(true);
 </script>
 
 <Modal
@@ -59,6 +70,20 @@
 						<option value={theme}>{theme.label}</option>
 					{/each}
 				</select>
+			</label>
+			<label class="label">
+				<span class="label-text">Fonts</span>
+				{#each fonts as font (font.value)}
+					<input
+						type="checkbox"
+						class="checkbox"
+						bind:checked={font.checked}
+						onchange={(e: { currentTarget: HTMLInputElement }) =>
+							fontStore.set(font.value, e.currentTarget.checked)}
+						name={font.value}
+					/>
+					<span class="label-text">{font.value}</span>
+				{/each}
 			</label>
 		</form>
 	{/snippet}

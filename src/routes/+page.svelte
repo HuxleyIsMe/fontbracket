@@ -3,10 +3,19 @@
 	import Contestant from '$lib/components/Contestant.svelte';
 	import Bracket from '$lib/components/Bracket.svelte';
 	import { BracketStore } from '$lib/bracket/bracket';
+	import { getFontStore, type Font } from '$lib/fonts.svelte';
 
 	const atLeastMedium = new MediaQuery('width >= 48rem', true);
 
-	let bracket = $state(new BracketStore());
+	let fontStore = getFontStore();
+	let fonts: Font[] = $derived(
+		fontStore
+			.keys()
+			.filter((font) => fontStore.get(font))
+			.toArray()
+	);
+
+	let bracket = $derived(new BracketStore(fonts));
 	let pairsIterator = $derived(bracket.pairs());
 
 	let next = $derived(pairsIterator.next());
@@ -19,7 +28,7 @@
 	};
 
 	const reset = () => {
-		bracket = new BracketStore();
+		bracket = new BracketStore(fonts);
 	};
 </script>
 
@@ -33,6 +42,7 @@
 			<Bracket {bracket} />
 		</div>
 	{:else if pair}
+		<p>{pair.fonts[0]} vs {pair.fonts[1]}</p>
 		<div class="grid h-full grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]">
 			{@render contestant(pair.fonts[0], 'left')}
 			{#if atLeastMedium.current}
