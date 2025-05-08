@@ -13,7 +13,7 @@ export class Round {
 
 		if (contestants.length % 2 !== 0) {
 			const bye = Math.floor(Math.random() * fonts.length);
-			this.winners.push(...contestants.splice(bye, 1));
+			contestants.splice(bye + 1, 0, 'BYE');
 		}
 
 		for (let i = 1; i < contestants.length; i += 2) {
@@ -27,7 +27,9 @@ export class Round {
 		}
 
 		for (const pair of this.contests) {
-			yield pair;
+			if (!pair.fonts.includes('BYE')) {
+				yield pair;
+			}
 			if (!pair.winner) {
 				throw new Error('Must choose a winner before requesting next pair');
 			}

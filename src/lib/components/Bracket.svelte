@@ -14,7 +14,7 @@
 		{#each round.contests as contest, index (index)}
 			{#each contest.fonts as font, index (index)}
 				<li
-					style:font-family={font}
+					style={font !== 'BYE' ? `font-family: ${font}` : ''}
 					class={font === contest.winner ? 'text-success-500' : 'text-error-500'}
 				>
 					{font}
