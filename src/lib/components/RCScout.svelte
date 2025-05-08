@@ -3,7 +3,7 @@
 </script>
 
 <p class="text-center">
-	<i class="rc-scout__logo"></i> Want to become a better programmer?
+	<span class="rc-scout__logo"></span> Want to become a better programmer?
 	<AnimatedLink href="https://www.recurse.com/scout/click?t=cc51f62d4fba4eaa31f5db7120fb45a7"
 		>Join the Recurse Center!</AnimatedLink
 	>

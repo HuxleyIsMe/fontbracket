@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, Switch } from '@skeletonlabs/skeleton-svelte';
+	import { Modal } from '@skeletonlabs/skeleton-svelte';
 	import Menu from '@lucide/svelte/icons/menu';
 	import X from '@lucide/svelte/icons/x';
 	import { languageStore } from '$lib/examples/languages.svelte';
