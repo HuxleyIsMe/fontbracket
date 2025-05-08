@@ -107,6 +107,7 @@
 		"@fontsource/unifontex": "^5.2.5",
 		"@fontsource/vt323": "^5.2.5",
 		"@fontsource/xanh-mono": "^5.2.5",
-		"@lucide/svelte": "^0.506.0"
+		"@lucide/svelte": "^0.506.0",
+		"bracketry": "^1.1.3"
 	}
 }
