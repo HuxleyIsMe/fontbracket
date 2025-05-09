@@ -41,9 +41,7 @@
 
 <div class="flex w-full flex-col justify-center gap-4">
 	{#if winner}
-		{#key atLeastMedium.current}
-			<Bracket {bracket} atLeastMedium={atLeastMedium.current} />
-		{/key}
+		<Bracket {bracket} {atLeastMedium} />
 	{:else if pair}
 		<label class="label flex items-center space-x-2">
 			<Switch
