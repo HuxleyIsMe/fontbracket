@@ -37,8 +37,8 @@ func main() {
 	}
 
 	// these can all look too similar sometimes
-	oO0 := "lower case O, upper case O, zero"
-	l1I := "lower case L, number 1, upper case I"
+	oO0 := "lower case o, upper case O, number 0"
+	l1I := "lower case l, number 1, upper case I"
 }`;
 
 export const js = `const cracklepop = () => {
@@ -76,8 +76,8 @@ if (nums <= 3 || nums >= 5 && nums !== 6) {
 }
 
 // these can all look too similar sometimes
-const oO0 = "lower case O, upper case O, zero";
-const l1I = "lower case L, number 1, upper case I";`;
+const oO0 = "lower case o, upper case O, number 0";
+const l1I = "lower case l, number 1, upper case I";`;
 
 export const python = `# this is a comment
 def cracklepop(number):
@@ -106,8 +106,8 @@ elif nums < 100 or nums > 100:
     print("weird")
 
 # these can all look too similar sometimes
-oO0 = "lower case O, upper case O, zero"
-l1I = "lower case L, number 1, upper case I"`;
+oO0 = "lower case o, upper case O, number 0"
+l1I = "lower case l, number 1, upper case I"`;
 
 export const rust = `fn main() {
     for i in 1..=100 {
@@ -138,6 +138,6 @@ export const rust = `fn main() {
     }
 
     // these can all look too similar sometimes
-    let oO0 = "lower case O, upper case O, zero";
+    let oO0 = "lower case o, upper case O, number 0";
     let l1I = "lower case L, number 1, upper case I";
 }`;
