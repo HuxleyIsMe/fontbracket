@@ -46,7 +46,7 @@ export type Options = {
 	disableHighlight?: boolean;
 	verticalScrollMode?: 'native' | 'buttons' | 'mixed';
 	scrollButtonPadding?: string;
-	maxMatchWidth?: number;
+	matchMaxWidth?: number;
 
 	connectionLinesColor: string;
 	highlightedConnectionLinesColor: string;

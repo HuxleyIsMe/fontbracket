@@ -2,13 +2,13 @@
 	import type { BracketStore } from '$lib/bracket/bracket';
 	import { onMount } from 'svelte';
 	import type { Data, Contestants, Options } from './types';
-	import { MediaQuery } from 'svelte/reactivity';
 
 	interface Props {
 		bracket: BracketStore;
+		atLeastMedium: boolean;
 	}
 
-	const { bracket }: Props = $props();
+	const { bracket, atLeastMedium }: Props = $props();
 
 	const data: Data = $derived({
 		rounds: bracket.rounds.map((_val, index) => ({ name: `Round ${index + 1}` })),
@@ -61,18 +61,19 @@
 		distanceBetweenScorePairs: 10,
 		verticalScrollMode: 'mixed',
 		scrollButtonPadding: '0px',
-		maxMatchWidth: 360,
+		matchMaxWidth: 360,
 		...baseOpts
 	});
-
-	const atLeastMedium = new MediaQuery('width >= 48rem', true);
-	const opts = $derived(atLeastMedium ? baseOpts : mobileOpts);
 
 	let node: HTMLDivElement;
 
 	onMount(async () => {
 		const { createBracket } = await import('bracketry/dist/esm/index.js');
-		createBracket(data, node, mobileOpts);
+		if (atLeastMedium) {
+			createBracket(data, node, baseOpts);
+		} else {
+			createBracket(data, node, mobileOpts);
+		}
 	});
 </script>
 
