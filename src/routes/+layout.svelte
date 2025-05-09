@@ -21,7 +21,7 @@
 	</script>
 </svelte:head>
 
-<div class="grid h-screen grid-rows-[auto_1fr_auto]">
+<div class="grid h-screen max-w-screen grid-rows-[auto_1fr_auto]">
 	<AppBar base="sticky top-0 z-10 h-16" background="bg-surface-50-950/80 backdrop-blur-sm">
 		{#snippet trail()}
 			<a href="https://github.com/k-nox/fontbracket" class="btn hover:preset-tonal-primary">
@@ -38,7 +38,7 @@
 			</h1>
 		{/snippet}
 	</AppBar>
-	<main class="bg-surface-50-950 space-y-4 p-4">
+	<main class="bg-surface-50-950 w-full space-y-4 p-4">
 		{@render children()}
 	</main>
 	<footer class="bg-surface-50-950 h-16 p-4">

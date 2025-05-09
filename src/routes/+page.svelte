@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { MediaQuery } from 'svelte/reactivity';
 	import Contestant from '$lib/components/Contestant.svelte';
-	import Bracket from '$lib/components/Bracket.svelte';
+	import Bracket from '$lib/components/Bracket/Bracket.svelte';
 	import { BracketStore } from '$lib/bracket/bracket';
 	import { getFontStore, type Font } from '$lib/fonts.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
@@ -39,11 +39,9 @@
 	<Contestant {side} {showFontName} {font} onclick={() => choose(font)} />
 {/snippet}
 
-<div class="flex flex-col justify-center gap-4">
+<div class="flex w-full flex-col justify-center gap-4">
 	{#if winner}
-		<div class="flex w-full">
-			<Bracket {bracket} />
-		</div>
+		<Bracket {bracket} />
 	{:else if pair}
 		<label class="label flex items-center space-x-2">
 			<Switch
