@@ -1,19 +1,15 @@
 <script lang="ts">
+	import { themeStore } from '$lib/theme.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
-
-	let checked = $state(false);
 
 	$effect(() => {
 		const mode = localStorage.getItem('mode') || 'dark';
-		checked = mode === 'dark';
+		themeStore.darkMode = mode === 'dark';
 	});
 
 	const onCheckedChange = (event: { checked: boolean }) => {
-		const mode = event.checked ? 'dark' : 'light';
-		document.documentElement.setAttribute('data-mode', mode);
-		localStorage.setItem('mode', mode);
-		checked = event.checked;
+		themeStore.darkMode = event.checked;
 	};
 </script>
 
-<Switch {checked} {onCheckedChange}></Switch>
+<Switch checked={themeStore.darkMode} {onCheckedChange}></Switch>

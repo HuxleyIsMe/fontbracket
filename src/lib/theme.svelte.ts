@@ -95,15 +95,17 @@ export type Theme = (typeof themes)[number];
 export type ThemeValue = (typeof themes)[number]['value'];
 
 class ThemeStore {
-	#selected?: (typeof themes)[number] = $state();
+	#selected? = $state<(typeof themes)[number]>();
+	#darkMode? = $state<boolean>();
 	#options = themes;
 
-	constructor() {
+	constructor(darkMode: boolean) {
 		if (browser && localStorage.getItem('theme')) {
 			this.#selected = this.#options.find((theme) => theme.value === localStorage.getItem('theme'));
 		} else {
 			this.#selected = this.#options[0];
 		}
+		this.#darkMode = darkMode;
 	}
 
 	public get selected(): Theme | undefined {
@@ -121,8 +123,19 @@ class ThemeStore {
 	public get options(): typeof themes {
 		return this.#options;
 	}
+
+	public get darkMode() {
+		return !!this.#darkMode;
+	}
+
+	public set darkMode(val: boolean) {
+		const mode = val ? 'dark' : 'light';
+		document.documentElement.setAttribute('data-mode', mode);
+		localStorage.setItem('mode', mode);
+		this.#darkMode = val;
+	}
 }
 
-const themeStore = new ThemeStore();
+const themeStore = new ThemeStore(false);
 
 export { themeStore };
