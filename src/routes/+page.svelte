@@ -9,12 +9,8 @@
 	const atLeastMedium = new MediaQuery('width >= 48rem', true);
 
 	let fontStore = getFontStore();
-	let fonts: Font[] = $derived(
-		fontStore
-			.keys()
-			.filter((font) => fontStore.get(font))
-			.toArray()
-	);
+
+	let fonts: Font[] = $derived(Array.from(fontStore.keys()).filter((font) => fontStore.get(font)));
 
 	let bracket = $derived(new BracketStore(fonts));
 	let pairsIterator = $derived(bracket.pairs());
