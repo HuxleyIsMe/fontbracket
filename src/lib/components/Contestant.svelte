@@ -12,7 +12,7 @@
 		showFontName: boolean;
 	}
 
-	const { side, font, onclick, showFontName }: Props = $props();
+	const { side, font, onclick, fonts, showFontName }: Props = $props();
 	const lang = $derived(languageStore.selected);
 	const theme = $derived(colorSchemeStore.selected);
 	const keyToListenFor = $derived(side === 'left' ? 'ArrowLeft' : 'ArrowRight');
@@ -22,6 +22,8 @@
 			onclick();
 		}
 	};
+
+	let selectedFont = $state();
 </script>
 
 <svelte:window onkeydown={handleKeydown} />
@@ -30,21 +32,16 @@
 	{#if showFontName}
 		<p style:font-family={font}>{font}</p>
 	{/if}
-	<button
-		{onclick}
-		class="btn {side === 'left'
-			? 'preset-outlined-primary-500 hover:preset-tonal-primary'
-			: 'preset-outlined-secondary-500 hover:preset-tonal-secondary'} place-self-center"
+
+	<select
+		bind:value={selectedFont}
+		onchange={() => {
+			console.log('meow');
+		}}
 	>
-		Choose
-		<kbd class="kbd">
-			{#if side === 'left'}
-				<ArrowLeft />
-			{:else}
-				<ArrowRight />
-			{/if}
-			<span class="sr-only">{side}</span>
-		</kbd>
-	</button>
+		{#each fonts as fontStyle}
+			<option value={fontStyle}>{fontStyle}</option>
+		{/each}
+	</select>
 	<CodeBlock code={lang?.code} lang={lang?.value} theme={theme?.value} --contestant-font={font} />
 </article>

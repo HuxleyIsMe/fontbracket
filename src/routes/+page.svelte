@@ -13,6 +13,8 @@
 	let fonts: Font[] = $derived(Array.from(fontStore.keys()).filter((font) => fontStore.get(font)));
 
 	let bracket = $derived(new BracketStore(fonts));
+
+	console.log({ bracket });
 	let pairsIterator = $derived(bracket.pairs());
 
 	let next = $derived(pairsIterator.next());
@@ -32,7 +34,7 @@
 </script>
 
 {#snippet contestant(font: string, side: 'left' | 'right')}
-	<Contestant {side} {showFontName} {font} onclick={() => choose(font)} />
+	<Contestant {side} {showFontName} {font} {fonts} onclick={(font) => choose(font)} />
 {/snippet}
 
 <div class="flex w-full flex-col justify-center gap-4">
