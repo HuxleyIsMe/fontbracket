@@ -30,7 +30,6 @@
 	{#if showFontName}
 		<p style:font-family={font}>{font}</p>
 	{/if}
-	<CodeBlock code={lang?.code} lang={lang?.value} theme={theme?.value} --contestant-font={font} />
 	<button
 		{onclick}
 		class="btn {side === 'left'
@@ -47,4 +46,5 @@
 			<span class="sr-only">{side}</span>
 		</kbd>
 	</button>
+	<CodeBlock code={lang?.code} lang={lang?.value} theme={theme?.value} --contestant-font={font} />
 </article>
